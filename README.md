@@ -2,8 +2,6 @@
 
 A modern recipe search application built with Next.js that allows users to discover recipes based on ingredients, cuisines, and preparation time.
 
-![Recipe Search App Screenshot](./public/app-screenshot.png)
-
 ## App features
 
 - Search recipes by name, cuisine type, or preparation time
