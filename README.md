@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Recipe Search Application
 
-## Getting Started
+A modern recipe search application built with Next.js that allows users to discover recipes based on ingredients, cuisines, and preparation time.
 
-First, run the development server:
+![Recipe Search App Screenshot](./public/app-screenshot.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## App features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Search recipes by name, cuisine type, or preparation time
+- Multiple international cuisines
+- Maximum cooking time constraints
+- Responsive design
+- Modern UI
+- Server-side rendering (optimal performance)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: Next.js (App Router)
+- **Styling**: Tailwind CSS
+- **API**: Spoonacular Recipe API
 
-## Learn More
+## Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+You need to have:
+- Node.js 18+ installed
+- A Spoonacular API key (https://spoonacular.com/food-api)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Getting started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone repository**
+   ```bash
+   git clone https://github.com/AzizZeynalli/recipes.git
+   cd recipe-search-app
+   ```
 
-## Deploy on Vercel
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Set up environment variables**
+   
+   Create a `.env.local` file in the root directory:
+   ```env
+   SPOONACULAR_API_KEY="your_api_key_here"
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Run dev server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open [http://localhost:3000](http://localhost:3000) in your browser**
+
+## Project Structure
+recipe-search-app/
+├── src/
+│   ├── app/
+│   │   ├── page.js #search form
+│   │   ├── recipes/
+│   │   │   ├── page.js #found recipes page
+│   │   │   ├── [id]/
+│   │   │   │   ├── page.js #recipe details page
+│   │   ├── layout.js #root layout
+│   │   ├── globals.css #global styles
+│   ├── components/ #shared components
+├── public/ #assets
+├── tailwind.config.js #tailwind config
+├── next.config.js #Next.js config
+
+
+## API routes
+
+This app uses the following Spoonacular API endpoints:
+
+- **recipe search**: 
+  ```
+  GET https://api.spoonacular.com/recipes/complexSearch
+  ```
+- **recipe details**: 
+  ```
+  GET https://api.spoonacular.com/recipes/{id}/information
+  ```
+
+## Screenshots
+**Home page (recipe search)**
+![alt text](image.png)
+
+**Found recipes page**
+![alt text](image-1.png)
+
+**Recipe details page**
+![alt text](image-2.png)
