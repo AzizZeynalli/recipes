@@ -52,23 +52,6 @@ You need to have:
 
 5. **Open [http://localhost:3000](http://localhost:3000) in your browser**
 
-## Project Structure
-recipe-search-app/
-├── src/
-│   ├── app/
-│   │   ├── page.js #search form
-│   │   ├── recipes/
-│   │   │   ├── page.js #found recipes page
-│   │   │   ├── [id]/
-│   │   │   │   ├── page.js #recipe details page
-│   │   ├── layout.js #root layout
-│   │   ├── globals.css #global styles
-│   ├── components/ #shared components
-├── public/ #assets
-├── tailwind.config.js #tailwind config
-├── next.config.js #Next.js config
-
-
 ## API routes
 
 This app uses the following Spoonacular API endpoints:
@@ -84,10 +67,10 @@ This app uses the following Spoonacular API endpoints:
 
 ## Screenshots
 **Home page (recipe search)**
-![alt text](image.png)
+![alt text](image-first.png)
 
 **Found recipes page**
-![alt text](image-1.png)
+![alt text](image-second.png)
 
 **Recipe details page**
-![alt text](image-2.png)
+![alt text](image-third.png)
